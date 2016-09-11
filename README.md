@@ -1,8 +1,6 @@
-meteor-jsencrypt
+flx-jsencrypt
 ================
-
 Generate RSA Private and Public keys in meteor.
-
 
 Generate Keys Example
 ================
@@ -50,19 +48,19 @@ Template.test.events = {
             default_key_size: 2048
         });
         crypt_private.setKey($(e.target).find('[name=private_key]').val());
-        
+
         var crypt_public = new JSEncrypt({
             default_key_size: 2048
         });
         crypt_public.setKey($(e.target).find('[name=public_key]').val());
-        
+
         var text = 'CCMED Test Encryption';
         // Encrypt the data with the public key.
         var enc = crypt_public.encrypt(text);
-        
+
         // Now decrypt the crypted text with the private key.
         var dec = crypt_private.decrypt(enc);
-        
+
         // Now a simple check to see if the round-trip worked.
         if (dec === text) {
            alert('Passed!');
@@ -92,6 +90,8 @@ Template.test.events = {
 
 Other Information
 ========================
+
+Many thanks https://github.com/wreiske/meteor-jsencrypt
 
 This library heavily utilizes the wonderful work of Tom Wu found at http://www-cs-students.stanford.edu/~tjw/jsbn/.
 

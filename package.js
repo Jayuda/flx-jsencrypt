@@ -1,6 +1,6 @@
 Package.describe({
     name: 'jayuda:flx-jsencrypt',
-    version: '0.0.1',
+    version: '0.0.2',
     summary: "JSEncrypt in meteor.",
     git: 'https://github.com/Jayuda/flx-jsencrypt',
     documentation: 'README.md'
